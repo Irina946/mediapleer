@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
                     currentPosition = position
                     mediaPlayer?.stop()
                     mediaPlayer?.release()
-                    setupMediaPlayer() // Переинициализация MediaPlayer с новой песней
+                    setupMediaPlayer()
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -105,8 +105,8 @@ class MainActivity : AppCompatActivity() {
         currentPosition = (currentPosition + 1) % songs.size
         mediaPlayer?.stop()
         mediaPlayer?.release()
-        setupMediaPlayer() // Запуск следующей песни
-        mediaPlayer?.start() // Запускаем новую песню
+        setupMediaPlayer() 
+        mediaPlayer?.start() 
         updateSeekBar()
     }
 
